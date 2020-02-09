@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  teacher: 
+  event_time: 2020-02-09 18:42:02
+  description: MyString
+  event_type: MyString
+
+two:
+  teacher: 
+  event_time: 2020-02-09 18:42:02
+  description: MyString
+  event_type: MyString

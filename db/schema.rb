@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200209233215) do
+ActiveRecord::Schema.define(version: 20200209234202) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "log_events", force: :cascade do |t|
+    t.integer  "teacher_id"
+    t.datetime "event_time",  null: false
+    t.string   "description"
+    t.string   "event_type",  null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["event_type"], name: "index_log_events_on_event_type", using: :btree
+    t.index ["teacher_id"], name: "index_log_events_on_teacher_id", using: :btree
+  end
 
   create_table "teachers", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -29,4 +40,5 @@ ActiveRecord::Schema.define(version: 20200209233215) do
     t.index ["reset_password_token"], name: "index_teachers_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "log_events", "teachers"
 end
