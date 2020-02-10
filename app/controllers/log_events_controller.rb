@@ -4,7 +4,7 @@ class LogEventsController < ApplicationController
   # GET /log_events
   # GET /log_events.json
   def index
-    @log_events = LogEvent.all
+    @log_events = LogEvent.for_teacher(current_teacher).order_by_latest
   end
 
   # GET /log_events/1
