@@ -27,6 +27,7 @@ class LogEvent < ApplicationRecord
 
   private
 
+  # Validations
   def previous_event_conflict
     if previous_event_for_the_day&.event_type == event_type
       errors.add(:event_type, "Please check the Event type: #{event_type} \
