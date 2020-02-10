@@ -13,4 +13,6 @@ A Teacher model with attributes first name, last name, email and password. Which
 ## Given another day to work on this, how would I spend it? given a month?
 
 I would like to add some styling and make the UI look better and make the workflow easier as well by having the new log event form on the index page. Also group the events per day in the UI so that user/teacher is clear about their events for the day.  Add a Location model with address and time zone and make the teacher and log events belong to location so that the time entered for the event will be parsed with the time zone before validating.
+
+
 Given a month I would make the front end as a seperate app in reactjs or vuejs, have a nice datetime picker, have a profile page for the teacher with the ability to update their picture. Add enum constraint on postgresql for the log event. Have a flag on events that are mismatched for the day and highlight them to the teacher on the UI or send them an email to make sure to fix them. Have a confirmation email sent on upon registration. Create an Admin User to create many Locations that can be selected by the teacher and add one as their default location. 
