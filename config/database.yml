@@ -18,3 +18,5 @@ test:
 production:
   <<: *default
   database: teacher_app
+  username: keerthisiv
+  password: <%= ENV['TAPP_DATABASE_PASSWORD'] %>
