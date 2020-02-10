@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Log Events</h1>
+<h1><%= "Welcome #{current_teacher.email}" %></h1>
 
 <table>
   <thead>
@@ -15,7 +15,7 @@
   <tbody>
     <% @log_events.each do |log_event| %>
       <tr>
-        <td><%= log_event.event_time %></td>
+        <td><%= format_event_time(log_event.event_time) %></td>
         <td><%= log_event.description %></td>
         <td><%= log_event.event_type %></td>
         <td><%= link_to 'Show', log_event %></td>
