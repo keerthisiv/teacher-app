@@ -25,6 +25,7 @@ class LogEventsController < ApplicationController
   # POST /log_events.json
   def create
     @log_event = LogEvent.new(log_event_params)
+    @log_event.teacher = current_teacher
 
     respond_to do |format|
       if @log_event.save
@@ -69,6 +70,6 @@ class LogEventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def log_event_params
-      params.require(:log_event).permit(:teacher, :event_time, :description, :event_type)
+      params.require(:log_event).permit(:event_time, :description, :event_type)
     end
 end

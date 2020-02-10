@@ -5,7 +5,6 @@
 <table>
   <thead>
     <tr>
-      <th>Teacher</th>
       <th>Event time</th>
       <th>Description</th>
       <th>Event type</th>
@@ -16,7 +15,6 @@
   <tbody>
     <% @log_events.each do |log_event| %>
       <tr>
-        <td><%= log_event.teacher %></td>
         <td><%= log_event.event_time %></td>
         <td><%= log_event.description %></td>
         <td><%= log_event.event_type %></td>

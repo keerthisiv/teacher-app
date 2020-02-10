@@ -12,11 +12,6 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :teacher %>
-    <%= f.text_field :teacher %>
-  </div>
-
-  <div class="field">
     <%= f.label :event_time %>
     <%= f.datetime_select :event_time %>
   </div>
@@ -28,7 +23,7 @@
 
   <div class="field">
     <%= f.label :event_type %>
-    <%= f.text_field :event_type %>
+    <%= f.select :event_type, event_types_to_select %>
   </div>
 
   <div class="actions">
